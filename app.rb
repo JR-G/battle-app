@@ -20,15 +20,13 @@ class BattleApp < Sinatra::Base
   end
 
   get '/play' do
-    @player1 = $game.player_one
-    @player2 = $game.player_two
+    @game = $game
     erb :play
   end
 
   get '/attack' do
-    @player1 = $game.player_one
-    @player2 = $game.player_two
-    $game.attack(@player2)
+    @game = $game
+    @game.attack(@game.player_two)
     erb :attack
   end
 
