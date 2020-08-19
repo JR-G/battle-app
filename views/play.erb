@@ -1,5 +1,5 @@
-<h1><%=@player1%> vs <%=@player2%></h1>
+<h1><%= @player1.name %> vs <%= @player2.name %></h1>
 
-<h2><%=@player2%>: 100HP</h2>
+<h2><%= @player2.name %>: <%= @player2.hit_points %>HP</h2>
 
-<a href="/attack">Attack <%=@player2%></a>
+<a href="/attack">Attack <%= @player2.name %></a>
